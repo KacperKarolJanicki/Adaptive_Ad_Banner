@@ -1,5 +1,5 @@
 name: adaptive_ad_banner
-description: "A new Flutter package project."
+description: "AdMob adaptive banner library which makes a process of implementation much easier"
 version: 0.0.1
 homepage: https://github.com/KacperKarolJanicki/Adaptive_Ad_Banner
 
