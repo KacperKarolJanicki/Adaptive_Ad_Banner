@@ -21,7 +21,7 @@ class _AdaptiveAdBannerState extends State<AdaptiveAdBanner> {
   void didChangeDependencies() async {
     super.didChangeDependencies();
 
-    final size = await AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(
+    final size = await AdSize.getLargeAnchoredAdaptiveBannerAdSize(
       MediaQuery
           .sizeOf(context)
           .width

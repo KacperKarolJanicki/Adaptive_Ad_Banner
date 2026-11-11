@@ -1,6 +1,6 @@
 name: adaptive_ad_banner
 description: "AdMob adaptive banner library which makes a process of implementation much easier"
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/KacperKarolJanicki/Adaptive_Ad_Banner
 
 environment:
@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  google_mobile_ads: ^6.0.0
+  google_mobile_ads: ^9.2.0
 
 dev_dependencies:
   flutter_test:
