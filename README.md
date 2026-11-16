@@ -24,8 +24,7 @@ Add the package to your project's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  adaptive_ad_banner: ^0.0.1 # Use the actual version published on pub.dev
-  google_mobile_ads: ^3.0.0 # Make sure you have the official AdMob package as well
+  adaptive_ad_banner: ^0.0.3 # Use the actual version published on pub.dev
 ```
 
 Run flutter pub get.
@@ -51,11 +50,38 @@ Replace "YOUR_ADMOB_APP_ID" with your actual ID (e.g., ca-app-pub-XXXXXXXXXXXXXX
 Use the AdaptiveBannerAdWidget anywhere you need a banner ad. 
 The widget will handle loading and correct sizing automatically.
 
+Initialization is very important!
+
+``` Dart
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await AdaptiveAds.initialize();
+  runApp(const MyApp());
+}
+```
+
+
 Example Implementation:
 
 ``` Dart
 import 'package:flutter/material.dart';
 import 'package:adaptive_ad_banner/adaptive_ad_banner.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await AdaptiveAds.initialize();
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: const MyScreen(),
+    );
+  }
+}
 
 class MyScreen extends StatelessWidget {
   const MyScreen({super.key});
