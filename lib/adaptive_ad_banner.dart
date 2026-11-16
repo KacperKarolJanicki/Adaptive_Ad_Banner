@@ -71,3 +71,9 @@ class _AdaptiveAdBannerState extends State<AdaptiveAdBanner> {
     return const SizedBox(height: 50.0);
   }
 }
+
+class AdaptiveAds {
+  static Future<void> initialize() async {
+    await MobileAds.instance.initialize();
+  }
+}
